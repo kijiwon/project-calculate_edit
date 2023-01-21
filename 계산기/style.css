@@ -48,6 +48,35 @@ body{
     font-size: 20px;
     color: rgb(146, 146, 146);
 }
+.switch-mode{
+    appearance: none;
+    position: relative;
+    border: 2px solid gray;
+    border-radius: 12.5px;
+    width: 32.5px;
+    height: 18.5px;
+}
+.switch-mode::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background-color: gray;
+    transition: left 300ms linear;
+}
+/* 라이트모드 */
+.switch-mode:checked::before{
+    background-color: white;
+    left: 1em;
+}
+/* 다크모드 */
+.switch-mode:checked{
+    background-color: gray;
+    border-color: gray;
+}
 .output{
     width: 400px;
     height: 100px;
