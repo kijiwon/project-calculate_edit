@@ -92,7 +92,7 @@ body{
     /* 내부에 그림자-x축 y축 블러 그림자확장 */
     box-shadow: inset 0px 0px 10px 3px rgb(171, 170, 170); 
     text-align: end;
-    font-size: 50px;
+    font-size: 45px;
     padding: 30px 15px 0px 0px;
     margin-top: 10px;
 }
@@ -116,7 +116,7 @@ body{
 .btn{
     border-radius: 12px;
     border: none;
-    font-size: 26px;
+    font-size: 20px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3), -3px -3px 7px #fffb;
     cursor: pointer;
 }
