@@ -1,4 +1,4 @@
-
+const body = document.querySelector('body');
 const display = document.querySelector('.output');
 const calculator = document.querySelector('.container');
 const buttons = calculator.querySelector('.cal-btns');
@@ -18,3 +18,8 @@ function closeCal(){
 }
 start_btn.addEventListener('click',startCal);
 close_btn.addEventListener('click',closeCal);
+
+// 다크모드 / 라이트모드
+switch_mode.onclick = function(){
+    body.classList.toggle('dark');
+}

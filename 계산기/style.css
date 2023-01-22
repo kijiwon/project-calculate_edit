@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
+    font-family: 'Unbounded', cursive;
 }
 body{
     min-height: 100vh;
@@ -14,6 +16,9 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgba(238, 238, 238, 0.794);
+}
+.dark {
+    background-color: rgba(0,0,0,0.8);
 }
 .container{
     /* border: 1px solid black; */
@@ -30,6 +35,10 @@ body{
     border-radius: 20px;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
 }
+.dark .container{
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.7), -15px -15px 30px rgba(160, 160, 160, 0.7);
+}
 .header{
     width: 440px;
     display: flex;
@@ -37,23 +46,15 @@ body{
     justify-content: space-between;
     padding: 0 20px;
 }
-/* .btn-close{
-    border: .5px solid rgb(61, 60, 60);
-    border-radius: 25px;
-    width: 20px;
-    font-size: 18px;
-    text-align: center;
-} */
 #close-btn {
     font-size: 20px;
-    color: rgb(146, 146, 146);
+    color: rgba(0, 0, 0, 0.7);
     cursor: pointer;
     transition: all 0.6s ease;
 }
-#close-btn:active{
-    color: rgba(0, 0, 0, 0.5);
+.dark #close-btn{
+    color: #fffb;
 }
-
 .switch-mode{
     appearance: none;
     position: relative;
@@ -92,9 +93,14 @@ body{
     box-shadow: inset 0px 0px 10px 3px rgb(171, 170, 170); 
     text-align: end;
     font-size: 50px;
-    padding-top: 40px;
-    padding-right: 10px;
+    padding: 30px 15px 0px 0px;
     margin-top: 10px;
+}
+.dark .output{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: #fffb;
+    box-shadow: inset 0px 0px 10px 3px rgb(0,0,0,1);
 }
 .cal-btns{
     width: 400px;
@@ -110,13 +116,27 @@ body{
 .btn{
     border-radius: 12px;
     border: none;
+    font-size: 26px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3), -3px -3px 7px #fffb;
     cursor: pointer;
 }
+.dark .btn{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fffb;
+    /* 다크모드는 버튼이 들어가있는 느낌쓰 */
+    box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.7);
+}
 .btn:active{
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.3);
     box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px #fffb;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
+    color: #fffb;
+}
+.dark .btn:active{
+    background-color: rgba(247, 247, 247, 0.794);
+    color: rgb(56, 56, 56);
+    /* 다크모드 box-shadow 너무 어렵... */
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px #fffb;
 }
 #start-cal{
     font-size: 50px;
@@ -125,3 +145,4 @@ body{
 .hide{
     display: none;
 }
+
