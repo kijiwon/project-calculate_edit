@@ -9,10 +9,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container hide">
         <div class="header">
             <!-- <p class="btn-close">x</p> -->
-            <i class="fa-regular fa-circle-xmark close-btn"></i>
+            <i class="fa-regular fa-circle-xmark" id="close-btn"></i>
             <!-- 토글 스위치 -->
             <input role="switch" type="checkbox" class="switch-mode">
         </div>
@@ -40,7 +40,9 @@
 
             </div>
     </div>
-    <i class="fa-solid fa-calculator hide" id="start-cal"></i>
+    <div class="start">
+        <i class="fa-solid fa-calculator" id="start-cal"></i>
+    </div>
     
     <script src="script.js"></script>
 </body>
