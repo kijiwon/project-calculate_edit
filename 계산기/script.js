@@ -9,7 +9,6 @@ const switch_mode = document.querySelector('.switch-mode');
 const start_btn = document.getElementById('start-cal')
 const close_btn = document.getElementById('close-btn')
 const startBox = document.querySelector('.start');
-
 // 버튼 이벤트 넣기
 function startCal (){
     startBox.classList.add('hide');
@@ -56,7 +55,6 @@ buttons.addEventListener('click', function (event) {
     const action = target.classList[0]; // 클릭된 HTML 엘리먼트에 클레스 정보
     const buttonContent = target.textContent; // 클릭된 HTML 엘리먼트의 텍스트 정보
     const buttonContainerArray = buttons.children;
-    // console.dir(event);
     if(target.matches('button')){
         for(let i=0; i<buttonContainerArray.length; i++){
             const childrenArray = buttonContainerArray[i].children;
