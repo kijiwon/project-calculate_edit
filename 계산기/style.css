@@ -95,6 +95,11 @@ body{
     font-size: 45px;
     padding: 30px 15px 0px 0px;
     margin-top: 10px;
+    overflow-x: scroll;
+}
+/* 스크롤바 숨기기 */
+.output::-webkit-scrollbar{
+    display: none;
 }
 .dark .output{
     background-color: rgba(0, 0, 0, 0.2);
@@ -110,29 +115,41 @@ body{
     margin-top: 20px;
     gap: 10px 10px;
 }
-.btn:last-child{
+button:last-child{
     grid-column: span 2;
 }
-.btn{
+button{
     border-radius: 12px;
     border: none;
     font-size: 20px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3), -3px -3px 7px #fffb;
     cursor: pointer;
 }
-.dark .btn{
+.dark button{
     background-color: rgba(0, 0, 0, 0.3);
     color: #fffb;
     /* 다크모드는 버튼이 들어가있는 느낌쓰 */
     box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.7);
 }
-.btn:active{
+button:active{
     background-color: rgba(0,0,0,0.3);
     box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px #fffb;
     transition: all 0.1s ease;
     color: #fffb;
 }
-.dark .btn:active{
+.pushed{
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px #fffb;
+    transition: all 0.1s ease;
+    color: #fffb;
+}
+.dark button:active{
+    background-color: rgba(247, 247, 247, 0.794);
+    color: rgb(56, 56, 56);
+    /* 다크모드 box-shadow 너무 어렵... */
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px #fffb;
+}
+.dark .pushed{
     background-color: rgba(247, 247, 247, 0.794);
     color: rgb(56, 56, 56);
     /* 다크모드 box-shadow 너무 어렵... */
